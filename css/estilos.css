@@ -494,7 +494,9 @@ main .main-saludo h2{
     display: flex;
     justify-content: start;
 }
-
+.avoid-spam{
+    display: none;
+}
 
 
 /* ====================================== FOOTER ====================================== */
