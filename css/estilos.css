@@ -460,6 +460,7 @@ main .main-saludo h2{
     border-bottom: 1px solid #fff;
     font-size: 15px;
     resize: none;
+    border-radius: 0;
 }
 .contacto-form form button:focus,
 .contacto-form form input:focus,
