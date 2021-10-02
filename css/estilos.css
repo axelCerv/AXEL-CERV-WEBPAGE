@@ -108,12 +108,12 @@ p{
     padding: 5px 10px;
     border-radius: 20px;
 }
-.menu-principal ul li a.active{
-    
-    color: white;
+.menu-principal ul li a.active{   
+    color: var(--verde-coral);  
     background: var(--negro);
     border-radius: 20px;
 }
+
 .menu-principal ul li a:hover{
     border-radius: 20px;
     box-shadow: inset 0 0 0 1px rgb(0, 0, 0);
@@ -264,9 +264,9 @@ main .main-saludo h2{
 
 .main-logos a i:hover{
     transform: translateY(-2px);
-    color: #fff;
-    
-    
+    color: var(--verde-coral);
+    background-color:var(--negro);
+  
 }
 
 .about-imagen{
@@ -356,9 +356,13 @@ main .main-saludo h2{
 
 
 /* ======================================PROYECTOS CARDS====================================== */
+.proyectos{
+    overflow: hidden;
+}
 .proyectos-content{
     padding-top: 80px;
     padding-bottom: 200px;
+   
 }
 .proyectos-content h2{
     text-align: center;
@@ -369,7 +373,7 @@ main .main-saludo h2{
     grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
     grid-gap: 30px;
     color: #fff;
-    overflow: hidden;
+   
 }
 
 .card-item{
@@ -582,6 +586,13 @@ footer {
     .btn-menures{
         display: block;
         font-size: 25px;
+        
+    }
+    .btn-menures .menu-btn{
+        transition: .3s ease all;
+    }
+    .menu-btn:hover{
+        transform:scale(1.1);
     }
     .close-btn{
         color: #fff;
@@ -624,16 +635,16 @@ footer {
         text-align: center;
         width: 100%;
     }
-    .menu-principal ul li a.active{
-        border-radius: 0px;
-    }
+  
+
     .menu-principal .menu-texto.active{
         
         left: 0;
       }
     .menu-principal ul li a:hover{
-        border-radius:0px;
-        border: none;       
+        color: var(--verde-coral);   
+        border: none;
+        box-shadow: none;
     }
 
     main{
