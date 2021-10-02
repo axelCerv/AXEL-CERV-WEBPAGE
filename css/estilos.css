@@ -368,7 +368,7 @@ main .main-saludo h2{
 .cards{
     margin-top: 50px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
     grid-gap: 30px;
     color: #fff;
    
@@ -381,7 +381,7 @@ main .main-saludo h2{
 }
 
 .card-img{
-    
+    object-fit: cover;
     height: 230px;
     position: relative;
     clip-path: polygon(0 0,100% 0, 100% 85%, 0 100%);
@@ -783,6 +783,10 @@ footer {
 
     .proyectos-content {
         padding-bottom: 80px;
+    }
+
+    .cards{
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     }
 
     /* =========CONTACTO========== */
