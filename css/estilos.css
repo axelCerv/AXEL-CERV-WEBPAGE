@@ -109,7 +109,7 @@ p{
     border-radius: 20px;
 }
 .menu-principal ul li a.active{   
-    color: var(--verde-coral);  
+    color: #fff;  
     background: var(--negro);
     border-radius: 20px;
 }
@@ -356,9 +356,7 @@ main .main-saludo h2{
 
 
 /* ======================================PROYECTOS CARDS====================================== */
-.proyectos{
-    overflow: hidden;
-}
+
 .proyectos-content{
     padding-top: 80px;
     padding-bottom: 200px;
@@ -600,7 +598,7 @@ footer {
         z-index: 1;
         top: 0;
         right: 0;
-        margin: 40px 60px;
+        margin: 40px 40px;
     }
     .menu{
         background: #fff;
@@ -761,13 +759,15 @@ footer {
         grid-column: 1/8;
         grid-row: -2/-2;
         font-size: 12px;
-        flex-wrap: wrap;
-        flex-direction: row;
+        flex-wrap: nowrap;
+        flex-direction: column;
         margin-top: 10px;
         text-align: center;
+        align-items: center;
     }
     .datos-personales div{
-        width: 50%;
+        width:100%;
+        font-size: 15px;
     }
     .main-logos{
         flex-direction: row;
