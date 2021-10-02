@@ -369,6 +369,7 @@ main .main-saludo h2{
     grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
     grid-gap: 30px;
     color: #fff;
+    overflow: hidden;
 }
 
 .card-item{
