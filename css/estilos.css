@@ -511,21 +511,68 @@ main .main-saludo h2{
 /* ====================================== FOOTER ====================================== */
 
 footer {
-    height: 15vh;
+    min-width: 200px;
     background: var(--negro);
     color: white;
 }
 
 .footer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height:100%;
+    display: grid;
+    grid-template-columns: 50% 25% 25%;
+    
+    padding: 50px 0;
 }
 .footer h3{
+    color: var(--verde-coral);
+    margin-bottom: 20px;
+}
+.fastMenu ul li{
+    list-style: none;
+}
+.fastMenu ul li a{
+    font-size: 14px;
+    font-family: var(--font-textos);
+    color: #fff;
+    text-decoration: none; 
+}
+.fastMenu ul li a:hover{
+    color: var(--verde-coral);
+}
+
+
+.mainFooter{
+    
+    text-align: left;
     font-size: 12px;
-    font-weight: 400;
-    text-align: center;
+    width: 80%;
+}
+.logo-footer{
+    width: 60px;
+    margin-bottom: 10px;
+}
+
+.contactFooter{
+    text-align: left;
+}
+.contactFooter p{
+    font-size: 14px;
+}
+.contactFooter p i{
+    width: 10px;
+    color: var(--verde-coral);
+    margin-right: 15px;
+}
+.redesFooter{
+    margin-top: 20px;
+}
+.redesFooter a{
+    margin-right: 12px;
+}
+.redesFooter a i{
+    color: #fff;
+}
+.redesFooter a i:hover{
+    color: var(--verde-coral);
 }
 
 
