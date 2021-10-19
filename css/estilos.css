@@ -184,12 +184,53 @@ main .main-saludo h2{
     height: 35px;
     border-radius: 20px;
     transition: .3s ease all;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, .5);
+    animation: pulse 1.5s infinite;
 }
-.start-button:hover{
+
+@keyframes pulse {
+    0%{
+        transform: scale(.99);
+        box-shadow: #0000002b 0px 0px 0px 0px;
+    }
+    70%{
+        transform: scale(1);
+        box-shadow: 0 0 0 25px rgba(256, 256, 256, 0);
+    }
+    100%{
+        transform: scale(.99);
+        box-shadow: 0 0 0 0 rgba(256, 256, 256, 0);
+    }
+}
+
+.start-button::after{
+    content:"";
+    width: 2px;
+    height: 2px; 
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    z-index: 1;
+    border-radius:20px;
+    transition: ease .3s all;
+    transform-origin: center;
     
-    background:var(--verde-coral);
 }
+.start-button:hover::after{
+   transform: scale(50);
+   background: var(--verde-coral);
+}
+
+.start-button:hover{
+    animation: none;
+    background: var(--verde-coral);
+}
+
 .start-button i{
+    position: relative;
+    z-index: 4;
     color: #fff;
     font-size: 25px;
 }
@@ -540,8 +581,7 @@ footer {
 }
 
 
-.mainFooter{
-    
+.mainFooter{  
     text-align: left;
     font-size: 12px;
     width: 80%;
@@ -721,6 +761,16 @@ footer {
     .card-item{
         width: 80%;
         margin: 0 auto;
+    }
+
+    /* ============Footer============= */
+    .footer{
+        display: grid;
+        grid-template-columns: 70% 30%;    
+        padding: 50px 0;
+    }
+    .fastMenu{
+        display: none;
     }
       
 }
