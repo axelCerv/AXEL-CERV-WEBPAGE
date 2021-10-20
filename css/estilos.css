@@ -60,7 +60,8 @@ p{
 .close-btn{
     color: #fff;
 }
-.menu{   
+.menu{  
+    z-index: 1; 
     background: transparent;
     padding: 20px 0;
     position: fixed;
@@ -72,7 +73,7 @@ p{
 .menu.menu-scrolled{
     background: #fff;
     box-shadow: 1px 7px 12px -2px rgba(0,0,0,0.10);
-    z-index: 10;
+    z-index: 100;
     
 }
 .navegador{
@@ -157,7 +158,6 @@ main{
     align-items:center;
     text-align: center;
     flex-direction: column;
-
 }
 h1{
     font-size: 90px;
@@ -520,25 +520,54 @@ main .main-saludo h2{
     border-bottom: 1px solid var(--verde-coral);
     color: var(--verde-coral);
 }
+
+
 .contacto-form form textarea{
     max-width: 100%;
-    max-height:200px ;
+    max-height:200px;
 }
 
 .contacto-form form button{
     font-family: var(--font-textos);
-    font-size: 15px;
+    font-size: 17px;
     /* width: 20%; */
-    background: var(--verde-coral);
+    background: linear-gradient(332deg, rgba(95,249,223,1) 0%, rgba(27,217,185,1) 52%, rgba(73,243,215,1) 100%);
     border: none;
+    border-radius: 20px;
     cursor: pointer;
-    color:var(--negro);
+    color: var(--negro);
     font-weight: 600;
     width: 100%;
+    overflow: hidden;
+    position: relative;
+
+}
+.contacto-form form button span{
+    z-index: 2;
+    position: relative;
+}
+
+.contacto-form form button::after{
+    content: "";
+    width: 1px;
+    height: 1px;
+    background: #6effe7;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: .3s ease-in-out all;
+    z-index: 0;
+    transform-origin: center;
+}
+
+.contacto-form form button:hover::after{
+    transform: scale(2000);
 }
 .contacto-form form button:hover{
-    opacity: .8;
+    transform: translateY(-3px);
+    box-shadow: 1px 7px 12px -2px rgba(42, 255, 227, 0.4);
 }
+
 .contacto-form form .boton-form{
     width: 100%;
     display: flex;
@@ -765,9 +794,7 @@ footer {
 
     /* ============Footer============= */
     .footer{
-        display: grid;
         grid-template-columns: 70% 30%;    
-        padding: 50px 0;
     }
     .fastMenu{
         display: none;
@@ -802,6 +829,9 @@ footer {
     }
     .main-logos a{
         padding: 10px 0;
+    }
+    .footer{
+        grid-template-columns: 60% 40%;    
     }
   
 }
@@ -842,6 +872,18 @@ footer {
     .contacto-form form{
         display:block;
     }
+    .footer{
+        grid-template-columns: 100%;
+    }
+    .contactFooter{
+        display: none;
+    }
+    .mainFooter{  
+        text-align: center;
+        font-size: 12px;
+        width: 100%;
+    }
+
 }
 
 @media (max-width: 550px){

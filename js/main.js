@@ -1,5 +1,5 @@
-addEventListener('DOMContentLoaded', () => {
-
+// addEventListener('DOMContentLoaded', () => {
+    
 /* ==============================MENU RESPOSIVE==============================*/    
     var menu = document.querySelector('.menu-texto');
     var menuBtn = document.querySelector('.menu-btn');
@@ -18,7 +18,7 @@ addEventListener('DOMContentLoaded', () => {
     menuBtn.addEventListener("click", () => {
         add();
     });
-
+    // =============================REMOVE ON CLICK MENU=============================
     var removeActiveMenu = function(){
         document.querySelectorAll('nav ul li a').forEach( el => {
             el.addEventListener("click", () => {
@@ -30,14 +30,26 @@ addEventListener('DOMContentLoaded', () => {
 
     //==============================SCROLLREVEAL==============================//
 
-    ScrollReveal().reveal('.main');
-    ScrollReveal().reveal('.about-content', {delay:400});
-    ScrollReveal().reveal('.skills-content',{delay:400});
+    // ScrollReveal().reveal('.main');
+    // ScrollReveal().reveal('.about-content', {delay:400});
+    const escroll = ScrollReveal({
+        origin: 'top',
+        distance: '60px',
+        duration: 2500,
+        delay: 400,
+    });
+    escroll.reveal('.main');
+    escroll.reveal('.about-principal', {origin : 'left'});
+    escroll.reveal('.datos-personales', {origin : 'left'});
+    escroll.reveal('.main-logos', {origin : 'left'});
+    escroll.reveal('.about-imagen', {origin : 'right'});
+    escroll.reveal('.proyectos-content, .card-item', {interval: 200});
+    escroll.reveal('.contacto-content');
+
     /* let animacion = document.getElementsByClassName('.circle');
     animacion.style.animation = 'progress 2s ease-out forwards'; */
+   
     
- 
-
 
 /*==============================ACTIVE MENU==============================*/
 
@@ -91,6 +103,8 @@ addEventListener('DOMContentLoaded', () => {
 
 
        }
+
+ 
 /*==============================ONSCROLL FUNCTIONS==============================*/ 
    
         var removeAllActiveClasses = function(){
@@ -129,4 +143,4 @@ addEventListener('DOMContentLoaded', () => {
 
  
        
-});
+// });
