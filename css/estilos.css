@@ -15,6 +15,8 @@
     --font-textos: 'Baloo Thambi 2';
     --verde-coral: #1ce7c5;
     --title-size:60px;
+    --verde-check: #31ec4a;
+    --rojo-check:#ff3737;
 }
 body{   
     color: var(--negro);
@@ -491,7 +493,8 @@ main .main-saludo h2{
 .contacto-form .block{
     grid-column: 1 / 3;
 }
-.contacto-form form p{
+.contacto-form form .sec-input{
+    font-family: var(--font-textos);
     margin: 0;
     padding: 1em;
 }
@@ -504,7 +507,7 @@ main .main-saludo h2{
     width: 100%;
     padding: 20px;
     border: none;
-    background: none;
+    background: transparent;
     outline: none;
     border-bottom: 1px solid #fff;
     font-size: 15px;
@@ -514,7 +517,8 @@ main .main-saludo h2{
 .contacto-form form button:focus,
 .contacto-form form input:focus,
 .contacto-form form textarea:focus
-{
+{   
+    
     outline: none;
     resize: none;
     border-bottom: 1px solid var(--verde-coral);
@@ -526,6 +530,61 @@ main .main-saludo h2{
     max-width: 100%;
     max-height:200px;
 }
+
+
+
+.inputs{
+    position: relative;
+}
+.inputs .texto-false{
+    display: none;
+    margin-top: 10px;
+    font-size: 14px;
+    color: rgb(134, 134, 134);
+}
+
+.text-aviso .inputs .texto-false{
+    display: block;
+}
+
+.inputs .check-item-true{
+    position: absolute;
+    right: 0;
+    bottom: 50%;
+    font-size: 15px;
+    opacity: 0;
+    padding-right: 20px;
+    color:var(--verde-check);
+}
+
+.inputs .check-item-false{
+    position: absolute;
+    right: 0;
+    font-size: 15px;
+    opacity: 0;
+    padding-right: 20px;
+    color: var(--rojo-check);
+}
+
+.check-true .check-item-true{
+    opacity: 1;
+    
+}
+.check-true .inputs input{
+    border-bottom: 1px solid var(--verde-check);
+}
+
+.check-false .check-item-false{
+    opacity: 1;
+}
+.check-false .inputs input{
+    border-bottom: 1px solid var(--rojo-check);
+}
+
+
+
+
+
 
 .contacto-form form button{
     font-family: var(--font-textos);

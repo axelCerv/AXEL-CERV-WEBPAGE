@@ -36,7 +36,7 @@
         origin: 'top',
         distance: '60px',
         duration: 2500,
-        delay: 400,
+        delay: 200,
     });
     escroll.reveal('.main');
     escroll.reveal('.about-principal', {origin : 'left'});
@@ -139,8 +139,89 @@
     });
     });
 /*==============================ACTIVE MENU==============================*/
-   
-
  
-       
+
+
+
+                                        // =========================VALIDACION DE FORMULARIO========================== //
+
+const formulario = document.getElementById('form');
+const inputs = document.querySelectorAll('#form div input')
+
+const expresiones = {
+	nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
+	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/, 
+	telefono: /^\d{7,14}$/ // 7 a 14 numeros.
+}
+
+const validarForm = (e) => {
+    switch (e.target.name){
+        case "Nombre":
+            if(expresiones.nombre.test(e.target.value) ){
+                document.getElementById('nombre').classList.remove('check-false');
+                document.getElementById('nombre').classList.add('check-true');
+                document.getElementById('nombre').classList.remove('text-aviso');
+            }else{
+                document.getElementById('nombre').classList.add('check-false');
+                document.getElementById('nombre').classList.remove('check-true');
+                document.getElementById('nombre').classList.add('text-aviso');
+            }
+
+             
+        break;
+
+        case "e-mail":
+            if(expresiones.correo.test(e.target.value) ){
+                document.getElementById('correo').classList.remove('check-false');
+                document.getElementById('correo').classList.add('check-true');
+                document.getElementById('correo').classList.remove('text-aviso');
+            }else{
+                document.getElementById('correo').classList.add('check-false');
+                document.getElementById('correo').classList.remove('check-true');
+                document.getElementById('correo').classList.add('text-aviso');
+            }
+        
+        break;
+
+        case "Telefono":
+            if(expresiones.telefono.test(e.target.value) ){
+                document.getElementById('telefono').classList.remove('check-false');
+                document.getElementById('telefono').classList.add('check-true');
+                document.getElementById('telefono').classList.remove('text-aviso');
+            }else{
+                document.getElementById('telefono').classList.add('check-false');
+                document.getElementById('telefono').classList.remove('check-true');
+                document.getElementById('telefono').classList.add('text-aviso');
+            }
+        
+        break;
+
+        case "Empresa":
+           if(e.target.value){
+            document.getElementById('empresa').classList.remove('check-false');
+            document.getElementById('empresa').classList.add('check-true');
+            document.getElementById('empresa').classList.remove('text-aviso');
+           }else{
+    
+            document.getElementById('empresa').classList.add('check-false');
+            document.getElementById('empresa').classList.remove('check-true');
+            document.getElementById('empresa').classList.add('text-aviso');
+           }
+        break;
+    }
+}
+
+inputs.forEach((input) => {
+    input.addEventListener('keyup', validarForm)
+    input.addEventListener('blur', validarForm)
+    
+});
+
+// formulario.addEventListener('submit', (e) =>{
+//     e.preventDefault
 // });
+
+                                                // =========================VALIDACION DE FORMULARIO========================== //
+
+
+

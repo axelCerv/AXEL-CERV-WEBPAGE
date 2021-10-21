@@ -210,39 +210,64 @@
             <div class="contacto-wrapper">
                 <div class="contacto-form">
 
-                    <form action="https://formsubmit.co/axelcervantes1610@gmail.com" method="POST">
+                    <form action="https://formsubmit.co/axelcervantes1610@gmail.com" method="POST" id=form>
                         <input type="hidden" name="_captcha" value="false">
                         <input type="hidden" name="_template" value="box">
                         <input type="hidden" name="_subject" value="Nuevo correo de tu página">
                         <input type="hidden" name="_next" value="https://axelcerv.github.io/axelcerv-webpage/">
-                        <p>
-                            <label for="name">Nombre Completo</label>
-                            <input type="text" name="Nombre" id="name" required="required">    
-                        </p>
                         
-                        <p>
-                            <label for="e-mail">Correo</label>
-                            <input type="email" name="e-mail" id="e-mail" required="required">
-                        </p>
-                        
-                        <p>
-                            <label for="phone">Teléfono</label>
-                            <input type="text" name="Teléfono" id="phone" required="required">
-                        </p>
-                        
-                        <p>
-                            <label for="empresa">Empresa</label>
-                            <input type="text" name="Empresa" id="empresa" required="required">
-                        </p>
-                        
-                        <p class="block">
-                            <label for="message">Mensaje</label>
-                            <textarea name="Mensaje" id="message" rows="5" required="required"></textarea>
-                        </p>
-                        <p class="block  boton-form">
-                            <button type="submit"><span>Enviar</span></button>
-                        </p>
+                            <div class="sec-input" id="nombre">
+                                <label for="name">Nombre Completo</label>
+                                <div class="inputs" >
+                                    <input type="text" name="Nombre" id="name" required="required">
+                                    <i class="check-item-true fas fa-check"></i> 
+                                    <i class="check-item-false fas fa-times"></i>
+                                    <p class="texto-false">Escriba un nombre correcto sin símbolos</p>
+                                </div>
+                                   
+                            </div>
+                            
+                            <div class="sec-input" id="correo">
+                                <label for="e-mail">Correo</label>
+                                <div class="inputs" >
+                                    <input type="email" name="e-mail" id="e-mail" required="required">
+                                    <i class="check-item-true fas fa-check"></i> 
+                                    <i class="check-item-false fas fa-times"></i>
+                                    <p class="texto-false">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="sec-input" id="telefono">
+                                <label for="phone">Teléfono</label>
+                                <div class="inputs" >
+                                    <input type="text" name="Telefono" id="phone" required="required" onkeypress="return onlyNum(event);">
+                                    <i class="check-item-true fas fa-check"></i> 
+                                    <i class="check-item-false fas fa-times"></i>
+                                    <p class="texto-false">El telefono solo puede contener numeros y el maximo son 14 dígitos.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="sec-input" id="empresa">
+                                <label for="empresa">Empresa</label>
+                                <div class="inputs" >
+                                    <input type="text" name="Empresa" id="empresa" required="required" >
+                                    <i class="check-item-true fas fa-check"></i> 
+                                    <i class="check-item-false fas fa-times"></i>
+                                    <p class="texto-false">Por favor escriba la empresa de donde proviene.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="block sec-input">
+                                <label for="message">Mensaje</label>
+                                <textarea name="Mensaje" id="message" rows="5" required="required"></textarea>
+                            </div>
+                            <div class="block  boton-form sec-input">
+                                <button type="submit" class="btn-enviar"><span>Enviar</span></button>
+                            </div>
+                   
+
                         <input type="text" name="_honey" style="display:none" class="avoid-spam">
+
                     </form>
 
                 </div>
