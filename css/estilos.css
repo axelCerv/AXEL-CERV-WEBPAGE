@@ -172,7 +172,16 @@ main .main-saludo h2{
 }
 .logo-main{
     width: 150px;
+    animation: floating 2s infinite ;
 }
+
+@keyframes floating{
+    50%{
+        
+        transform: translateY(-6%);
+    }
+}
+
 .cont-startbtn{
     margin-top: 50px;
     transition: .3s ease all;
@@ -542,6 +551,8 @@ main .main-saludo h2{
     font-size: 14px;
     color: rgb(134, 134, 134);
 }
+
+
 
 .text-aviso .inputs .texto-false{
     display: block;
