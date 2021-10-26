@@ -371,7 +371,7 @@ main .main-saludo h2{
 }
 
 
-.btn-download::before{
+.btn-download a::before{
     z-index: -100;
     content: 'Descargar CV';
     font-weight: 700;
@@ -389,8 +389,7 @@ main .main-saludo h2{
     transition: .3s ease-in-out all;
     overflow: hidden;
 }
-.btn-download:hover::before{
-       
+.btn-download:hover a::before{
     opacity: 1;
     width: 140px;
 }
@@ -1021,7 +1020,7 @@ footer {
         margin-top: 10px;
     }
 
-    .btn-download::before{
+    .btn-download a::before{
         width: 140px;
         opacity: 1;
         
