@@ -10,7 +10,7 @@
 
 
 :root{
-    --negro:#121212;
+    --negro: #010101;
     --gris:rgb(223, 223, 223);
     --font-textos: 'Baloo Thambi 2';
     --verde-coral: #1ce7c5;
@@ -28,6 +28,59 @@ h2{
 p{
     font-family: var(--font-textos);
 }
+.separador-right{
+    background: var(--negro);
+    min-height: 50px;
+    position: relative;
+    width: 100%;
+    padding: 40px 0;
+}
+.separador-right::after{
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 60px;
+    background:var(--verde-coral);
+    top: 0;
+    left: 50%;
+}
+.separador-right::before{
+    content: '';
+    position: absolute;
+    width: 50%;
+    border-bottom: dotted 2px rgb(66, 66, 66);
+    top: 30px;
+    left:50%;
+}
+
+.separador-left{
+    background: var(--negro);
+    min-height: 50px;
+    position: relative;
+    width: 100%;
+    padding: 40px 0;
+}
+.separador-left::after{
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 60px;
+    background:var(--verde-coral);
+    top: 0;
+    left: 50%;
+}
+.separador-left::before{
+    content: '';
+    position: absolute;
+    width: 50%;
+    border-bottom: dotted 2px rgb(66, 66, 66);
+    top: 30px;
+    left:0;
+}
+
+
+
+
 .banner{    
     width: 100%;
     height: 100vh;
@@ -244,6 +297,7 @@ main .main-saludo h2{
     z-index: 4;
     color: #fff;
     font-size: 25px;
+    pointer-events: none; 
 }
 
 
@@ -253,27 +307,113 @@ main .main-saludo h2{
 
 .about-me{
     min-height:700px;
-    background:var(--gris);
+    background: var(--negro);
     padding: 100px 0;
 }
 .about-content{
     display: grid;
     grid-template-columns: repeat(7,1fr);
     align-content: space-between;
+    color: #fff;
 }
 
 .about-principal{
     grid-column: -4/-8;
- 
+
 }
-.about-principal h2{
+.titulo-btn{
+    display: flex;
+    align-items: center;
     margin-bottom: 20px;
 }
+
 
 .about-principal p{
     font-family: var(--font-textos);
     font-size: 18px;
 }
+
+.btn-dw-cont{
+    margin-left: 30px;
+}
+.btn-download{
+    font-family: var(--font-textos);
+    font-size: 15px;
+    width: 30px;
+    height: 30px;
+    background: var(--verde-coral) ;
+    text-align: center;
+    border-radius: 15px;
+    /* box-shadow: 1px 2px 3px 0px var(--verde-coral); */
+    position: relative;
+    transition: .3s ease all;
+    cursor: pointer;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: pulse2 1.5s infinite;
+}
+
+@keyframes pulse2 {
+    0%{
+        transform: scale(.99);
+        box-shadow: #1cffd952 0px 0px 0px 0px;
+    }
+    70%{
+        transform: scale(1);
+        box-shadow: 0 0 0 15px rgba(256, 256, 256, 0);
+    }
+    100%{
+        transform: scale(.99);
+        box-shadow: 0 0 0 0 rgba(256, 256, 256, 0);
+    }
+}
+
+
+.btn-download::before{
+    z-index: -100;
+    content: 'Descargar CV';
+    font-weight: 700;
+    border-radius: 100px;
+    width: 30px;
+    height: 30px;
+    border: 2px solid var(--verde-coral);
+    background: var(--verde-coral);
+    color: var(--negro);
+    position: absolute;
+    padding-left: 25px;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: .3s ease-in-out all;
+    overflow: hidden;
+}
+.btn-download:hover::before{
+       
+    opacity: 1;
+    width: 140px;
+}
+.btn-download:hover{
+   z-index: 5;
+
+   animation: none;
+}
+
+
+.btn-download a{
+    color: var(--negro);
+    text-decoration: none;
+   
+}
+
+.btn-download i{
+    font-size: 15px;
+    
+}
+
+
+
 .datos-personales{
     grid-column: 1/5;  
     display: flex;
@@ -285,7 +425,7 @@ main .main-saludo h2{
 
 }
 .datos-personales div h3 i{
-    color: #4e4e4e;
+    color: var(--verde-coral);
 }
 .main-logos{
     display: flex;
@@ -294,38 +434,47 @@ main .main-saludo h2{
     align-items: center;
     margin-top: 20px;
     grid-column: 1/5;
+    grid-row: -1/-2;
 }
 .main-logos a{
     margin-right: 20px;
     text-decoration: none;
-   
+    position: relative;
+    
 }
+/* .main-logos a::after{
+    
+} */
+
+
 .main-logos i{
-    background-color: #4e4e4e;
+    background-color: var(--verde-coral);
     clip-path: polygon(50% 0, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
     width: 40px;
     height: 40px;
     font-size: 20px;
-    color: var(--gris);
+    color: var(--negro);
     transition: .3s ease all;
     align-items: center;
     justify-content: center;
     display: flex;
+    position: relative;
+    /* box-shadow: 0px 0px 0px 4px rgba(28,231,197,0.75); */
     
 }
 
 .main-logos a i:hover{
     transform: translateY(-2px);
     color: var(--verde-coral);
-    background-color:var(--negro);
-  
+    background-color:#181818;
+    
 }
 
 .about-imagen{
     padding-left: 20px;
     grid-column: 5/8;
     grid-row: -4/-1;
-    max-width: 500px;
+    max-width: 550px;
     justify-self: end;
     align-self: center;
 }
@@ -334,6 +483,8 @@ main .main-saludo h2{
     height: 100%;
     width: 100%;
 }
+
+
 /* ======================================SKILLS CHART====================================== */
 
 .skills{
@@ -410,12 +561,16 @@ main .main-saludo h2{
 
 /* ======================================PROYECTOS CARDS====================================== */
 
+.proyectos{
+    background: var(--negro);
+}
 .proyectos-content{
     padding-top: 80px;
-    padding-bottom: 200px;
-   
+    padding-bottom: 100px;
+
 }
 .proyectos-content h2{
+    color: #fff;
     text-align: center;
 }
 .cards{
@@ -429,7 +584,7 @@ main .main-saludo h2{
 
 .card-item{
     border-radius: 10px;
-    background-color: var(--negro);
+    background-color: #181818;
     box-shadow: 10px 10px 11px -3px rgba(0,0,0,0.33);
 }
 
@@ -478,17 +633,18 @@ main .main-saludo h2{
 /* ======================================CONTACTO====================================== */
 
 .contacto{
-    background: var(--gris);
+    background: var(--negro);
     min-height: 600px;
     padding: 80px 0;
 }
 .contacto h2{
     text-align: center;
     margin-bottom: 50px;
+    color: #fff;
 }
 
 .contacto-wrapper{
-    background: var(--negro);
+    background: #181818;
     padding: 40px;
     border-radius: 20px;
     box-shadow: 10px 10px 11px -3px rgba(0,0,0,0.33);
@@ -652,7 +808,7 @@ main .main-saludo h2{
 
 footer {
     min-width: 200px;
-    background: var(--negro);
+    background:#181818;
     color: white;
 }
 
@@ -745,7 +901,7 @@ footer {
 
     /* ============ABOUT========== */
     .about-content p{
-        font-size: 17px;
+        font-size: 16px;
     }
     .about-imagen{
         grid-row: -4/-3;
@@ -754,10 +910,14 @@ footer {
     }
     .datos-personales{
         grid-column: 1/5;
-        
+        font-size: 16px;
+    }
+    .datos-personales p{
+        font-size: 15px;
     }
     .main-logos{
         grid-column: 5/8;
+        grid-row: -2/-3;
         width: 100%;
         justify-content: center;
         margin: 0;
@@ -847,6 +1007,65 @@ footer {
         width: 30px;
         height: 30px;
     }
+    .titulo-btn{
+        flex-direction: column;
+        align-items: flex-start;
+        display: block;
+    }
+    .btn-download{
+        animation: none;
+        background: var(--verde-coral);
+    }
+    .btn-dw-cont {
+        margin-left:calc(50% - 70px);
+        margin-top: 10px;
+    }
+
+    .btn-download::before{
+        width: 140px;
+        opacity: 1;
+        
+    }
+    .btn-download a{
+        color: var(--negro);
+    }
+    .about-principal{
+        text-align: center;
+        grid-row: -3/-4;
+        grid-column: 1/8;
+        margin-bottom: 20px;
+    }
+    .titulo-btn{
+        justify-content: center;
+    }
+
+    .about-imagen{
+        grid-column: 1/5;
+        grid-row: -2/-3;
+        width: 85%;
+        justify-self: start;
+    }
+    .datos-personales{
+        grid-column: 5/8;
+        grid-row: -3/-2;
+        flex-direction: column;
+        font-size: 12px;
+       
+    }
+    .datos-personales div{
+        width: 100%;
+    }
+    .main-logos{
+        flex-direction: row;
+        grid-column: 1/8;
+        grid-row: inherit;
+        margin-top: 20px;
+    }
+    .main-logos a i {
+        font-size: 20px;
+        width: 40px;
+        height: 40px;
+    }
 
     /* ===========Skills=========== */
     .skills-chart{
@@ -890,16 +1109,7 @@ footer {
 
     /* ========ABOUT ME======== */
 
-    .datos-personales{
-        grid-column: 1/6;
-    }
-    .main-logos{
-        grid-column: 7/8;
-        flex-direction: column;
-    }
-    .main-logos a{
-        padding: 10px 0;
-    }
+    
     .footer{
         grid-template-columns: 60% 40%;    
     }
@@ -907,38 +1117,7 @@ footer {
 }
 
 @media (max-width: 610px){
-    .about-principal{
-        text-align: center;
-        grid-row: -3/-4;
-        grid-column: 1/8;
-        margin-bottom: 20px;
-    }
-    .about-imagen{
-        grid-column: 1/5;
-        grid-row: -2/-3;
-        width: 85%;
-        justify-self: start;
-    }
-    .datos-personales{
-        grid-column: 5/8;
-        grid-row: -3/-2;
-        flex-direction: column;
-        font-size: 12px;
-       
-    }
-    .datos-personales div{
-        width: 100%;
-    }
-    .main-logos{
-        flex-direction: row;
-        grid-column: 1/8;
-        margin-top: 20px;
-    }
-    .main-logos a i {
-        font-size: 20px;
-        width: 40px;
-        height: 40px;
-    }
+   
     .contacto-form form{
         display:block;
     }
@@ -969,9 +1148,10 @@ footer {
         width: 70%;
         justify-self: center;
     }
+    
     .datos-personales{
         grid-column: 1/8;
-        grid-row: -2/-2;
+        grid-row: -1/-2;
         font-size: 12px;
         flex-wrap: nowrap;
         flex-direction: column;

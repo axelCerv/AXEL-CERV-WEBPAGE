@@ -74,7 +74,7 @@
 
          /* ==============================SCROLL NAV MENU============================== */
         var scrollPosition = document.documentElement.scrollTop;
-        console.log(scrollPosition);
+        // console.log(scrollPosition);
         if(scrollPosition>= 200){
             document.querySelector('.menu').classList.add("menu-scrolled");
         }else{
@@ -104,6 +104,9 @@
 
        }
 
+
+   
+
  
 /*==============================ONSCROLL FUNCTIONS==============================*/ 
    
@@ -114,7 +117,7 @@
         }
         
         var addActiveClass = function(id){
-            console.log(id)
+            // console.log(id)
             var selector = `li a[href="#${id}"]`;
             document.querySelector(selector).classList.add("active");
         }
@@ -140,6 +143,31 @@
     });
 /*==============================ACTIVE MENU==============================*/
  
+
+
+
+document.querySelectorAll('a[href^="#"]').forEach( e => {
+    
+    e.addEventListener("click", (ev) => {
+        function goSection(){
+            var currentId = ev.target.attributes.href.value;
+            var section = document.querySelector(currentId);
+            var sectionPos = section.offsetTop;
+            
+            window.scrollTo(window.scrollX, sectionPos - 80);
+
+        };
+        
+        window.setTimeout (function(){
+            goSection();
+        }, 40);
+    });
+});
+
+// This is here so that when you enter the page with a hash,
+// it can provide the offset in that case too. Having a timeout
+// seems necessary to allow the browser to jump to the anchor first.
+
 
 
 
