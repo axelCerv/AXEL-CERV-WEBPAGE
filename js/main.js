@@ -51,12 +51,58 @@
    
     
 
+
+    /* ==============================SCROLL NAV MENU============================== */
+    function menuScrolled(){
+                 
+                 var scrollPosition = document.documentElement.scrollTop;
+                 // console.log(scrollPosition);
+                 if(scrollPosition>= 200){
+                     document.querySelector('.menu').classList.add("menu-scrolled");
+                 }else{
+                     document.querySelector('.menu').classList.remove("menu-scrolled");
+                 }       
+                  
+    };
+
+    
+    var removeAllActiveClasses = function(){
+        document.querySelectorAll('li a').forEach( el => {
+            el.classList.remove('active')
+        })
+    }
+    /* ==============================SCROLL NAV MENU============================== */
+
+
 /*==============================ACTIVE MENU==============================*/
 
-    const sections = document.querySelectorAll('.seccion');
+    var addActiveClass = function(id){
+        // console.log(id)
+        var selector = `li a[href="#${id}"]`;
+        document.querySelector(selector).classList.add("active");
+    }
 
-/*==============================ONSCROLL FUNCTIONS==============================*/ 
-    onscroll = function () {
+
+    var navLinks = document.querySelectorAll("li a");
+
+    navLinks.forEach((link) => {
+        link.addEventListener("click", (e) => {
+            e.preventDefault();
+            var currentId = e.target.attributes.href.value;
+            var section = document.querySelector(currentId);
+            var sectionPos = section.offsetTop;
+            // section.scrollIntoView({
+            //   behavior: "smooth",
+            // });
+
+            window.scroll({
+            top: sectionPos,
+            behavior: "smooth",
+            });
+        });
+    });
+    function secctionsValidate(){
+        const sections = document.querySelectorAll('.seccion');
         var scrollPosition = document.documentElement.scrollTop;
       
         sections.forEach((section) => {
@@ -71,38 +117,46 @@
            
           }
         });
+    }
+    secctionsValidate();
 
-         /* ==============================SCROLL NAV MENU============================== */
-        var scrollPosition = document.documentElement.scrollTop;
-        // console.log(scrollPosition);
-        if(scrollPosition>= 200){
-            document.querySelector('.menu').classList.add("menu-scrolled");
-        }else{
-            document.querySelector('.menu').classList.remove("menu-scrolled");
-        }       
-         /* ==============================-SCROLL NAV MENU==============================*/
+/*==============================ACTIVE MENU==============================*/
 
+ /*==============================SCROLL CIRCLE CHARTS==============================*/   
+ function loadSkills(){
+    var scrollPosition = document.documentElement.scrollTop;
+    var activeCircle = function(){
+        document.querySelectorAll('.circle').forEach( el => {
+            el.classList.add('active')
+        })
+    }
+    var removeCircle = function(){
+        document.querySelectorAll('.circle').forEach( el => {
+            el.classList.remove('active')
+        })
+    }
+    console.log(scrollPosition)
+     if(scrollPosition >= 1200 && scrollPosition <=2000){                       
+         activeCircle();
+     }else{
+         removeCircle();
+     }
+ };      
+    
+/*==============================SCROLL CIRCLE CHARTS==============================*/ 
+
+    
+
+/*==============================ONSCROLL FUNCTIONS==============================*/ 
+onscroll = function () {
+       
+        secctionsValidate();
+
+        menuScrolled();
         
-        /*==============================SCROLL CIRCLE CHARTS==============================*/         
-        var activeCircle = function(){
-            document.querySelectorAll('.circle').forEach( el => {
-                el.classList.add('active')
-            })
-        }
-        var removeCircle = function(){
-            document.querySelectorAll('.circle').forEach( el => {
-                el.classList.remove('active')
-            })
-        }
-         if(scrollPosition >= 1100){                       
-             activeCircle();
-         }else{
-             removeCircle();
-         }
-        /*==============================SCROLL CIRCLE CHARTS==============================*/ 
+        loadSkills();
 
-
-       }
+};
 
 
    
@@ -110,37 +164,6 @@
  
 /*==============================ONSCROLL FUNCTIONS==============================*/ 
    
-        var removeAllActiveClasses = function(){
-            document.querySelectorAll('li a').forEach( el => {
-                el.classList.remove('active')
-            })
-        }
-        
-        var addActiveClass = function(id){
-            // console.log(id)
-            var selector = `li a[href="#${id}"]`;
-            document.querySelector(selector).classList.add("active");
-        }
-
-
-        var navLinks = document.querySelectorAll("li a");
-
-        navLinks.forEach((link) => {
-        link.addEventListener("click", (e) => {
-            e.preventDefault();
-            var currentId = e.target.attributes.href.value;
-            var section = document.querySelector(currentId);
-            var sectionPos = section.offsetTop;
-            // section.scrollIntoView({
-            //   behavior: "smooth",
-            // });
-
-            window.scroll({
-            top: sectionPos,
-            behavior: "smooth",
-            });
-    });
-    });
 /*==============================ACTIVE MENU==============================*/
  
 

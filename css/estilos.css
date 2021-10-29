@@ -338,7 +338,7 @@ main .main-saludo h2{
 }
 .btn-download{
     font-family: var(--font-textos);
-    font-size: 15px;
+    font-size: 16px;
     width: 30px;
     height: 30px;
     background: var(--verde-coral) ;
