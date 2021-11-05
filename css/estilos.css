@@ -838,7 +838,11 @@ footer {
 .mainFooter{  
     text-align: left;
     font-size: 12px;
-    width: 80%;
+    width: 60%;
+}
+.mainFooter .copyright{
+    font-size: 11px;
+    color: rgb(160, 160, 160);
 }
 .logo-footer{
     width: 60px;
