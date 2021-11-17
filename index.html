@@ -20,23 +20,19 @@
     </style>
 </head>
 <body>
-    <div class="banner">
-        <video autoplay loop muted>
-            <source src="img/vid-grid-wp.mp4" type="video/mp4">
-        </video>
-
-    </div>
+    
     <header>
             <div class="menu" id="menu" >
                 <div class="content navegador">
                     <nav class="menu-principal">
-                        <a href="#inicio"  class="logo-menu"><img src="img/logo-ac.svg" alt="logo-ac"></a>
+                        <a href="#inicio"  class="logo-menu" ><img src="img/logo-ac.svg" alt="logo-ac"></a>
                         
                         <ul class="menu-texto">
                             <li><a href="#inicio">Inicio</a></li>
                             <li><a href="#about-section">Sobre mi</a></li>
                             <li><a href="#skills">Skills</a></li>                         
                             <li><a href="#proyectos">Proyectos</a></li>
+                            <li><a href="#questions">Preguntas</a></li>
                             <li><a href="#contacto">Contacto</a></li>
                   
                             <div class="btn-menures">
@@ -59,15 +55,33 @@
             </div>      
     </header>
 
-    <main class="content main seccion" id="inicio">
-        <div class="main-saludo">
-            <img src="img/logo-ac.svg" class="logo-main">
-            <h1>Hola, soy Axel</h1>
-            <h2>Y soy Desarrollador Front-end</h2>
+    <a href="https://api.whatsapp.com/send?phone=+525524194434" target="_blank" class="whatsapp-float">
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 32 32">
+            <path d="M24.503,7.503C22.247,5.245,19.247,4.001,16.05,4C9.464,4,4.103,9.359,4.1,15.945c-0.001,2.105,0.549,4.161,1.595,5.972L4,28.108l6.335-1.661c1.745,0.952,3.711,1.453,5.711,1.454h0.005c0,0,0,0,0,0c6.586,0,11.947-5.359,11.95-11.946C28.001,12.763,26.759,9.761,24.503,7.503z M16.05,25.883h-0.004c-1.782-0.001-3.53-0.479-5.055-1.384l-0.363-0.215L6.869,25.27l1.003-3.664L7.636,21.23c-0.994-1.581-1.519-3.408-1.519-5.284c0.002-5.475,4.458-9.928,9.936-9.928c2.653,0.001,5.147,1.035,7.022,2.912s2.907,4.371,2.906,7.024C25.98,21.429,21.525,25.883,16.05,25.883z M21.498,18.447c-0.299-0.149-1.767-0.872-2.04-0.971c-0.274-0.1-0.473-0.149-0.672,0.149c-0.199,0.299-0.771,0.971-0.945,1.17c-0.174,0.199-0.348,0.224-0.647,0.075c-0.299-0.149-1.261-0.465-2.401-1.482c-0.888-0.791-1.487-1.769-1.661-2.068c-0.174-0.299-0.019-0.46,0.131-0.609c0.134-0.134,0.299-0.349,0.448-0.523s0.199-0.299,0.299-0.498s0.05-0.374-0.025-0.523s-0.672-1.619-0.921-2.216c-0.242-0.582-0.489-0.503-0.672-0.512c-0.174-0.009-0.373-0.01-0.572-0.01c-0.199,0-0.523,0.075-0.796,0.374s-1.045,1.021-1.045,2.49s1.07,2.889,1.219,3.088s2.105,3.214,5.101,4.507c0.712,0.307,1.269,0.491,1.702,0.629c0.715,0.227,1.366,0.195,1.881,0.118c0.574-0.086,1.767-0.722,2.015-1.419c0.249-0.697,0.249-1.295,0.174-1.419C21.996,18.671,21.797,18.596,21.498,18.447z">
+            </path>
+        </svg>
+    </a>
+    
+
+    <main class="seccion" id="inicio">
+        
+        <div class="banner">
+            <video autoplay loop muted>
+                <source src="img/vid-grid-wp.mp4" type="video/mp4">
+            </video>
         </div>
-        <a href="#about-section" class="cont-startbtn start-button">         
-                <i class="fas fa-sort-down"></i>
-        </a>
+
+        <div class="main content">
+            
+            <div class="main-saludo">
+                <img src="img/logo-ac.svg" class="logo-main">
+                <h1>Hola, soy Axel</h1>
+                <h2>Y soy Desarrollador Front-end</h2>
+            </div>
+            <a href="#about-section" class="cont-startbtn start-button">         
+                    <i class="fas fa-sort-down"></i>
+            </a>
+        </div>
         
         
     </main>
@@ -213,6 +227,63 @@
     </section>
     
     <div class="separador-left"></div>
+
+    <!-- ====================================== P R E G U N T A S ====================================== -->
+
+    <section class="question-section seccion" id="questions">  
+        <div class="questions content">
+            <h2>Preguntas Frecuentes</h2>
+            <div class="questions-group">
+                <div class="questions-item">
+                    <div class="questions-header">
+                        <i class="fas fa-plus question-icon "></i>
+                        <h3 class="question-item-title">¿Cuál es mi objetivo laboral?</h3>
+                    </div>
+                    <div class="question-content">
+                        <p class="question-text">
+                            El objetivo actual que tengo es ser desarrollador Full-stack en aplicaciones web y móviles. Cada día me preparo y estudio arduamente para llegar a serlo, me gusta aprender nuevas cosas siempre y se me da bien enteder rápido los nuevos conocimientos. Estoy ansioso por trabajar en miles de proyectos que me lleven a desarrollar mi capacidad al máximo.
+                        </p>
+                    </div>
+                </div>
+                <div class="questions-item">
+                    <div class="questions-header">
+                        <i class="fas fa-plus question-icon "></i>
+                        <h3 class="question-item-title">¿Cómo me describo?</h3>
+                    </div>
+                    <div class="question-content">
+                        <p class="question-text">
+                            Soy una persona bastante autodidacta, me gusta mucho aprender nuevas cosas que sean de mi interés. Soy algo perfeccionista, si algo no me gusta como esta quedando, le sigo metiendo mando hasta que quede como me gusta y si veo que algo adicional le vendría bien, también lo hago. Soy muy alegre, me gusta mucho divertirme, escuchar música y pasar tiempo con mis amigos.
+                        </p>
+                    </div>
+                </div>
+                <div class="questions-item">
+                    <div class="questions-header">
+                        <i class="fas fa-plus question-icon "></i>
+                        <h3 class="question-item-title">¿Por qué me dedico a el desarrollo web?</h3>
+                    </div>
+                    <div class="question-content">
+                        <p class="question-text">
+                            Siempre me ha gustado la tecnología y el diseño, son las dos materias que más me gustan y se me dan bien, así que un tiempo decidí dedicarme al diseño gráfico, pero me dí cuenta que me gustaba aun más el programar y desarrollar aplicaciones, así que decidí unir estos dos gustos e iniciar mi carrera en el desarrollo web. Pero no solo quiero dedicarme al desarrollo de aplicaciones web, tambíen quiero desarrollar aplicaciones móviles, y de escritorio, al igual que aprender todo sobre el desarrollo backend para así convertirme en un desarrollador Full-stack.
+                        </p>
+                    </div>
+                </div>
+                <div class="questions-item">
+                    <div class="questions-header">
+                        <i class="fas fa-plus question-icon "></i>
+                        <h3 class="question-item-title">¿Por qué deberíamos trabajar juntos?</h3>
+                    </div>
+                    <div class="question-content">
+                        <p class="question-text">
+                            Creo que tengo mucho potencial en este medio y puedo aportar muchas cosas a las empresas y sus clientes, en mis ultimos trabajos como diseñador siempre tuve buenas respuestas por parte de los mismos, gran parte o la mayoría de mis trabajos y proyectos elaborados han tenido una buena respuesta por parte de los clientes. Me gusta mucho trabajar en esto y siempre he sido una persona que no le gusta estancarse en algo, siempre aporta nuevas cosas y se levanta cada día a aprender algo nuevo y mejorar su capacidad.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        
+    </section>
+
+    <div class="separador-right"></div>
     <!-- ====================================== C O N T A C T O ====================================== -->
 
     <section id="contacto" class="contacto seccion">

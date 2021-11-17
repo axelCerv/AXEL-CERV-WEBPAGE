@@ -261,16 +261,51 @@ const validarForm = (e) => {
         break;
     }
 }
-
+// formulario.addEventListener('submit', (e) =>{
+//     e.preventDefault
+// });
 inputs.forEach((input) => {
     input.addEventListener('keyup', validarForm)
     input.addEventListener('blur', validarForm)
     
 });
 
-// formulario.addEventListener('submit', (e) =>{
-//     e.preventDefault
-// });
+// ==============QUESTION ACCORDION================//
+
+const accordionItems = document.querySelectorAll('.questions-item');
+
+accordionItems.forEach((item)=>{
+    const accordionHeader = item.querySelector('.questions-header');
+
+    accordionHeader.addEventListener('click',()=>{
+        const openItem =document.querySelector('.accordion-open')
+
+        toggleItem(item);
+        if(openItem && openItem!== item){
+            toggleItem(openItem)
+        }
+    })
+    
+});
+
+const toggleItem = (item)=>{
+    const accordionContent = item.querySelector('.question-content');
+
+    if(item.classList.contains('accordion-open')){
+        accordionContent.removeAttribute('style')
+        item.classList.remove('accordion-open')
+    }else{
+        accordionContent.style.height = accordionContent.scrollHeight + 'px';
+        // accordionItems.style.border = 'border: 1px solid var(--verde-coral);';
+        item.classList.add('accordion-open');
+    }
+
+}
+
+
+
+
+
 
                                                 // =========================VALIDACION DE FORMULARIO========================== //
 
