@@ -35,7 +35,7 @@
     const escroll = ScrollReveal({
         origin: 'top',
         distance: '60px',
-        duration: 2500,
+        duration: 1500,
         delay: 200,
     });
     escroll.reveal('.main');
@@ -45,6 +45,7 @@
     escroll.reveal('.about-imagen', {origin : 'right'});
     escroll.reveal('.proyectos-content, .card-item', {interval: 200});
     escroll.reveal('.contacto-content');
+    escroll.reveal('.questions, .questions-item', {interval: 200});
 
     /* let animacion = document.getElementsByClassName('.circle');
     animacion.style.animation = 'progress 2s ease-out forwards'; */
