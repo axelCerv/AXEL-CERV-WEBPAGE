@@ -1,5 +1,6 @@
 {
     "workbench.preferredHighContrastColorTheme": "Default Dark+",
     "workbench.preferredLightColorTheme": "Red",
-    "workbench.colorTheme": "Bear Theme"
+    "workbench.colorTheme": "Bear Theme",
+    "liveServer.settings.port": 5501
 }
