@@ -30,13 +30,10 @@
 
     //==============================SCROLLREVEAL==============================//
 
-    // ScrollReveal().reveal('.main');
-    // ScrollReveal().reveal('.about-content', {delay:400});
     const escroll = ScrollReveal({
         origin: 'top',
         distance: '60px',
-        duration: 1500,
-        delay: 200,
+        duration: 1200,
     });
     escroll.reveal('.main');
     escroll.reveal('.about-principal', {origin : 'left'});
@@ -47,9 +44,6 @@
     escroll.reveal('.contacto-content');
     escroll.reveal('.questions, .questions-item', {interval: 200});
 
-    /* let animacion = document.getElementsByClassName('.circle');
-    animacion.style.animation = 'progress 2s ease-out forwards'; */
-   
     
 
 
@@ -78,7 +72,6 @@
 /*==============================ACTIVE MENU==============================*/
 
     var addActiveClass = function(id){
-        // console.log(id)
         var selector = `li a[href="#${id}"]`;
         document.querySelector(selector).classList.add("active");
     }
@@ -92,9 +85,6 @@
             var currentId = e.target.attributes.href.value;
             var section = document.querySelector(currentId);
             var sectionPos = section.offsetTop;
-            // section.scrollIntoView({
-            //   behavior: "smooth",
-            // });
 
             window.scroll({
             top: sectionPos,
@@ -136,7 +126,7 @@
             el.classList.remove('active')
         })
     }
-    console.log(scrollPosition)
+
      if(scrollPosition >= 1200 && scrollPosition <=2000){                       
          activeCircle();
      }else{
