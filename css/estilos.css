@@ -641,17 +641,15 @@ h1{
 .swiper{
     margin-top: 50px;
 }
-.swiper-wrapper{
-    overflow: visible;
-}
 .swiper-slide {
     display: flex;
     align-items: center;
     justify-content: center;
   }
   .swiper-pagination{
-      bottom: 50px !important ;
-     
+      bottom: 0px !important ;
+      position: relative !important;
+      margin-top: 10px;
   }
   .swiper-pagination-bullet{
       background: var(--gris) !important;

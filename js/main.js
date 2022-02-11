@@ -40,7 +40,6 @@
     escroll.reveal('.datos-personales', {origin : 'left'});
     escroll.reveal('.main-logos', {origin : 'left'});
     escroll.reveal('.about-imagen', {origin : 'right'});
-    escroll.reveal('.proyectos-content, .card-item', {interval: 200});
     escroll.reveal('.contacto-content');
     escroll.reveal('.questions, .questions-item', {interval: 200});
     
