@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@400;700&family=Orbitron:wght@400;700&display=swap');
 *,
 ::before,
 ::after{
@@ -621,19 +622,45 @@ h1{
 }
 
 .card-item{
+    min-height: 500px;
+    cursor: grab;
+    color: #fff;
+    width: 500px;
     border-radius: 10px;
     background-color: #181818;
     box-shadow: 10px 10px 11px -3px rgba(0,0,0,0.33);
 }
 
-.card-img{
-    
+.card-img{   
     height: 230px;
     position: relative;
     clip-path: polygon(0 0,100% 0, 100% 85%, 0 100%);
     object-fit: cover;
     
 }
+.swiper{
+    margin-top: 50px;
+}
+.swiper-wrapper{
+    overflow: visible;
+}
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .swiper-pagination{
+      bottom: 50px !important ;
+     
+  }
+  .swiper-pagination-bullet{
+      background: var(--gris) !important;
+      width: 10px !important;
+      height: 10px !important;
+  }
+  .swiper-pagination-bullet-active{
+      background: var(--verde-coral) !important;
+  }
 .card-img:after{
     content: "";
     height: 100%;
@@ -665,6 +692,10 @@ h1{
     padding-bottom: 15px;
     margin-bottom: 15px;
     border-bottom: 1px solid var(--verde-coral);
+}
+.card-info h3>span{
+    font-family: var(--font-textos);
+    font-weight: 200;
 }
 
 /* ======================================PREGUNTAS FRECUENTES====================================== */
@@ -973,6 +1004,10 @@ footer {
 }
 
 
+
+
+
+
 /* ======================================MEDIAS QUERYS====================================== */
 
 
@@ -1180,10 +1215,7 @@ footer {
     }
 
     /* ===========Proyectos=========== */
-    .card-item{
-        width: 80%;
-        margin: 0 auto;
-    }
+    
 
     /* ============Footer============= */
     .footer{

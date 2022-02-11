@@ -43,7 +43,6 @@
     escroll.reveal('.proyectos-content, .card-item', {interval: 200});
     escroll.reveal('.contacto-content');
     escroll.reveal('.questions, .questions-item', {interval: 200});
-
     
 
 
@@ -61,6 +60,7 @@
     };
 
     
+
     var removeAllActiveClasses = function(){
         document.querySelectorAll('li a').forEach( el => {
             el.classList.remove('active')

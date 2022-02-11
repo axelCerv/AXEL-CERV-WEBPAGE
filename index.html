@@ -15,9 +15,9 @@
     <script src="https://unpkg.com/scrollreveal"></script>
     <!-- estilos -->
     <link rel="stylesheet" href="css/estilos.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@400;700&family=Orbitron:wght@400;700&display=swap');
-    </style>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+
+
 </head>
 <body>
     
@@ -187,7 +187,7 @@
                             d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
                           <text x="18" y="20.35" class="percentage">30%</text>
                         </svg>
-                        <h3>React / Bootstrap</h3>
+                        <h3>React Js</h3>
                     </div>
             </div>
        </div>
@@ -198,9 +198,10 @@
 
     <!-- ====================================== P R O Y E C T O S ====================================== -->
     <section id="proyectos" class="proyectos seccion">
+        
         <div class="proyectos-content content">
             <h2>Proyectos</h2>
-            <div class="cards">
+            <!-- <div class="cards">
                 <div class="card-item">
                     <a href="https://gymactive.mx/" target="_blank"><div class="card-img"><img src="img/gym-active-web.png" alt=""></div></a>
                     <div class="card-info">
@@ -218,11 +219,65 @@
                 <div class="card-item">
                     <a href="https://axelcerv.github.io/pruebapokemon/" target="_blank"><div class="card-img"><img src="img/pokemon.png" alt=""></div></a>
                     <div class="card-info">
-                        <h3>Pokemon</h3>
+                        <h3>Pokemon <span>(React Js)</span></h3>
                         <p>Estes es un proyecto personal que realice para la práctica de una aplicación en React haciendo una conexión a una API haciendo busqueda de datos y la carga de los mismos. Tambíen realizo un almacenamiento local para guardar los pokemones que hayan sido seleccionados como favoritos.</p>
                     </div>
                 </div>
+                <div class="card-item">
+                    <a href="https://axelcerv.github.io/weather-app/" target="_blank"><div class="card-img"><img src="img/weather-app.png" alt=""></div></a>
+                    <div class="card-info">
+                        <h3>Weather App <span>(React Js)</span></h3>
+                        <p>Este proyecto es una práctica con React Js en la cual se realiza una conección a una API, logrando asi obtener los datos del clima de diferentes ciudades, al igual que por defecto arroja los datos de la ubicación actual del usuario que navega en ella.</p>
+                    </div>
+                </div>
+            </div> -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <div class="card-item">
+                            <a href="https://gymactive.mx/" target="_blank">
+                            <div class="card-img"><img src="img/gym-active-web.png" alt=""></div></a>
+                            <div class="card-info">
+                                <h3>Gym Active</h3>
+                                <p>Este proyecto fue un rediseño de la página web del gimnasio Gym Active, ya que el anterior era muy poco legible y tenía muchos errores. El cliente quería un diseño a la vieja escuela como es la temática de su gimnasio así que decidí hacer este diseño un poco callejero para encajar con la temática.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card-item">
+                            <a href="https://axelcerv.github.io/CHRISTMAS-GIFT/" target="_blank">
+                            <div class="card-img"><img src="img/christmas-gift-web.png" alt=""></div></a>
+                            <div class="card-info">
+                                <h3>Christmas Gift</h3>
+                                <p>Este es un proyecto personal que estoy realizando con html, css y JavaScript nativo. Consiste en una página que elabora el proceso de un intercambio, en el cual escribes los nombres de los participantes y te arroja una lista de las personas a las que toca dar el intercambio, sigue en proceso pero el sistema de seleccion de participantes para el intercambio funciona.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card-item">
+                            <a href="https://axelcerv.github.io/pruebapokemon/" target="_blank">
+                            <div class="card-img"><img src="img/pokemon.png" alt=""></div></a>
+                            <div class="card-info">
+                                <h3>Pokemon <span>(React Js)</span></h3>
+                                <p>Estes es un proyecto personal que realice para la práctica de una aplicación en React haciendo una conexión a una API haciendo busqueda de datos y la carga de los mismos. Tambíen realizo un almacenamiento local para guardar los pokemones que hayan sido seleccionados como favoritos.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card-item">
+                            <a href="https://axelcerv.github.io/weather-app/" target="_blank">
+                            <div class="card-img"><img src="img/weather-app.png" alt=""></div></a>
+                            <div class="card-info">
+                                <h3>Weather App <span>(React Js)</span></h3>
+                                <p>Este proyecto es una práctica con React Js en la cual se realiza una conección a una API, logrando asi obtener los datos del clima de diferentes ciudades, al igual que por defecto arroja los datos de la ubicación actual del usuario que navega en ella.</p>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
             </div>
+            <div class="swiper-pagination"></div>
         </div>
     </section>
     
@@ -237,7 +292,7 @@
                 <div class="questions-item">
                     <div class="questions-header">
                         <i class="fas fa-plus question-icon "></i>
-                        <h3 class="question-item-title">¿Cuál es mi objetivo laboral?</h3>
+                        <h3 class="question-item-title">¿Cuál es mi objetivo profesional?</h3>
                     </div>
                     <div class="question-content">
                         <p class="question-text">
@@ -404,7 +459,35 @@
   
 
     <script src="js/main.js"></script>
-    
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script type="module">
+        import Swiper from 'https://unpkg.com/swiper@8/swiper-bundle.esm.browser.min.js'
+        var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        breakpoints:{
+            1124:{
+                slidesPerView: 3,
+                spaceBetween: 20
+            },
+            768:{
+                slidesPerView: 2,
+            },
+            425:{
+                slidesPerView: 1,
+            },
+            0:{
+                slidesPerView:1
+            }
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        }
+        
+      });
+
+    </script>
 </body>
 </html>
 
