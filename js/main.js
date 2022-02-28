@@ -301,3 +301,44 @@ const toggleItem = (item)=>{
 
 
 
+const btnWeb = document.querySelector('.btn-web')
+const btnDesign = document.querySelector('.btn-design')
+const btnVideo = document.querySelector('.btn-video')
+const webProyects = document.querySelector('.web-proyects')
+const designProyects = document.querySelector('.design-proyects')
+const videoProyects = document.querySelector('.video-proyects')
+const videoReel = document.querySelector('.reel')
+
+const removeActiveBtn = () =>{
+    btnWeb.classList.remove('active')
+    btnDesign.classList.remove('active')
+    btnVideo.classList.remove('active')
+}
+const stopVideo = () =>{
+    videoReel.pause()
+    videoReel.currentTime = 0
+}
+
+btnWeb.addEventListener('click', ()=>{
+    webProyects.style.display = 'block'
+    designProyects.style.display = 'none'
+    videoProyects.style.display = 'none'
+    removeActiveBtn()
+    btnWeb.classList.add('active')
+    stopVideo()
+});
+btnDesign.addEventListener('click', ()=>{
+    webProyects.style.display = 'none'
+    designProyects.style.display = 'block'
+    videoProyects.style.display = 'none'
+    removeActiveBtn()
+    btnDesign.classList.add('active')
+    stopVideo()
+});
+btnVideo.addEventListener('click', ()=>{
+    webProyects.style.display = 'none'
+    designProyects.style.display = 'none'
+    videoProyects.style.display = 'block'
+    removeActiveBtn()
+    btnVideo.classList.add('active')
+});
