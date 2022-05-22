@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
 
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 
 </head>
 <body>
@@ -457,11 +459,12 @@
             <div class="contacto-wrapper">
                 <div class="contacto-form">
 
-                    <form action="https://formsubmit.co/axelcervantes1610@gmail.com" method="POST" id=form >
+                    <form action="https://formsubmit.co/axelcervantes1610@gmail.com" method="POST" id="form" >
                         <input type="hidden" name="_captcha" value="false">
                         <input type="hidden" name="_template" value="box">
                         <input type="hidden" name="_subject" value="Nuevo correo de tu página">
                         <input type="hidden" name="_next" value="https://axelcerv.github.io/axelcerv-webpage/">
+                        
                         
                             <div class="sec-input" id="nombre">
                                 <label for="name">Nombre Completo</label>
@@ -508,14 +511,19 @@
                                 <label for="message">Mensaje</label>
                                 <textarea name="Mensaje" id="message" rows="5" required="required"></textarea>
                             </div>
-                            <div class="block  boton-form sec-input">
-                                <button type="submit" class="btn-enviar"><span>Enviar</span></button>
+                            <div class="block captcha">
+                                <div class="g-recaptcha" data-sitekey="6LdcQQsgAAAAAMp4xPI0sBZPbvYBsBX9s0-lJS5u"></div>
                             </div>
-                   
+                            <div class="block  boton-form sec-input">
+                                <button type="submit">Enviar</button>
+                            </div>
+                            
+                            <!-- clave sitio: 6LdcQQsgAAAAAMp4xPI0sBZPbvYBsBX9s0-lJS5u -->
+                            <!-- clave sectreta: 6LdcQQsgAAAAADCoyVpUZrQlOo3hkdwLrDjMtENj -->
 
                         <input type="text" name="_honey" style="display:none" class="avoid-spam">
 
-                    </form>
+                    </form> 
 
                 </div>
             </div>
