@@ -535,10 +535,15 @@
                                 <textarea name="Mensaje" id="message" rows="5" required="required"></textarea>
                             </div>
                             <div class="block captcha">
-                                <div class="g-recaptcha" data-sitekey="6LdcQQsgAAAAAMp4xPI0sBZPbvYBsBX9s0-lJS5u"></div>
+                                <div 
+                                    class="g-recaptcha" 
+                                    data-sitekey="6LdcQQsgAAAAAMp4xPI0sBZPbvYBsBX9s0-lJS5u"
+                                    data-callback="captcha_callback"
+                                    data-theme="dark"
+                                ></div>
                             </div>
                             <div class="block  boton-form sec-input">
-                                <button type="submit">Enviar</button>
+                                <button type="submit" id="form_button" class="disabled" disabled>Enviar</button>
                             </div>
                             
                             <!-- clave sitio: 6LdcQQsgAAAAAMp4xPI0sBZPbvYBsBX9s0-lJS5u -->

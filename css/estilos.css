@@ -963,8 +963,13 @@ h1{
     position: relative;
 
 }
+.contacto-form form button.disabled{
+    background: #5c8877;
+    text-decoration: none;
+    cursor: not-allowed;
+}
 .contacto-form form button span{
-    z-index: 2;
+    z-index: 0;
     position: relative;
 }
 
@@ -977,14 +982,14 @@ h1{
     top: 50%;
     left: 50%;
     transition: .3s ease-in-out all;
-    z-index: 0;
+    z-index: -1;
     transform-origin: center;
 }
 
 .contacto-form form button:hover::after{
     transform: scale(2000);
 }
-.contacto-form form button:hover{
+.contacto-form form button:not(.disabled):hover{
     color: #000;
     transform: translateY(-3px);
     box-shadow: 1px 7px 12px -2px rgba(42, 255, 227, 0.4);

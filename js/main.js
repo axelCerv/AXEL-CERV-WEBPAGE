@@ -186,6 +186,10 @@ document.querySelectorAll('a[href^="#"]').forEach( e => {
 
                                         // =========================VALIDACION DE FORMULARIO========================== //
 
+function captcha_callback (e){
+    const formButton = document.getElementById('form_button')
+    formButton.classList.remove('disabled')
+}
 const formulario = document.getElementById('form');
 const inputs = document.querySelectorAll('#form div input')
 
@@ -251,14 +255,15 @@ const validarForm = (e) => {
         break;
     }
 }
-// formulario.addEventListener('submit', (e) =>{
-//     e.preventDefault
-// });
+
 inputs.forEach((input) => {
     input.addEventListener('keyup', validarForm)
     input.addEventListener('blur', validarForm)
     
 });
+
+// =========================VALIDACION DE FORMULARIO========================== //
+
 
 // ==============QUESTION ACCORDION================//
 
@@ -297,7 +302,6 @@ const toggleItem = (item)=>{
 
 
 
-                                                // =========================VALIDACION DE FORMULARIO========================== //
 
 
 
